@@ -1,0 +1,26 @@
+{{ range .Site.RegularPages.ByDate.Reverse }}
+    <article>
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        <p>{{ .Date.Format "02 Jan 2006" }} </p>
+        
+        {{ if .Params.tags }}
+        <p>Tags:
+            {{ range $k, $v := .Params.tags -}}
+            {{- if $k }}, {{ end -}}
+            {{- $url := printf "/tags/%s" (. | urlize | lower) -}}
+            <a href="{{ $url | absURL }}">{{ . | title }}</a>
+            {{- end -}}
+        </p>
+        {{ end }}
+            
+        <p>{{ .Summary }}</p>
+
+        <p>{{ .WordCount }} words, {{ .ReadingTime }} minute read</p>
+
+        {{ if .Truncated }}
+            <a href="{{ .RelPermalink }}">Read full article...</a>
+        {{ end }}
+
+        <hr>
+    </article>
+{{ end }}

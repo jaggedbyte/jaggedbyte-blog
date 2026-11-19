@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <header>
+    {{ partial "header.html" . }}
+    {{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+    {{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
+    {{ if .Param "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}}
+  </main>
+  <footer>
+      <p><a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a></p>
+      {{- if .Param "showrss" }}<p><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a></p>{{ end }}
+      {{ partial "footer.html" . }}
+  </footer>
+</body>
+</html>

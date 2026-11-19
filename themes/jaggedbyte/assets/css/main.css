@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Recursive:wght@300..1000&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+:root {
+    --color-bg: #181818; /* #0a0a0a */
+    --color-fg: #d4d4d4; /* #f8f8FF; */
+    --color-link: #3d84ff;
+    --color-accent: #f97316; /* orange 500 */
+    --color-green: #a3be8c;
+    --color-rose: #e11d48; /* rose 600 */
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-green: #166534; /* green 800 */
+        --color-fg: #181818;
+        --color-bg: #f5f5f5;
+    }
+}
+
+body {
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  font-family: "Lexend", "Libertinus Serif", "Vollkorn", "Geomini", serif;
+  margin: 0 auto;
+  width: min(100% - 8rem, 65ch);
+  font-size: 1.5rem;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header {
+    margin-top: 2rem;
+}
+
+section h3 {
+    font-family: monospace;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Recursive", system-ui, sans-serif;
+    line-height: 1.1;
+}
+
+a {
+  color: var(--color-green);
+  /* color: #60a5fa; tailwind blue 400 */
+  text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+img {
+    max-width: 100%;
+}
+
+/* For TAGLIST.HTML */
+.taglist, footer {
+	text-align: center ;
+	clear: both ;
+}
+
+/* For NEXTPREV.HTML */
+#prevart {
+	float: left ;
+	text-align: left ;
+}
+
+#prevart div:hover, #nextart div:hover {
+    text-decoration: underline
+}
+
+#nextart {
+	float: right ;
+	text-align: right ;
+}
+#nextart,#prevart {
+	max-width: 33% ;
+}
+
