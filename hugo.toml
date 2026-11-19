@@ -9,6 +9,10 @@ theme = 'jaggedbyte'
 relatedtext = "Related"
 favicon = "/favicon.ico"
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 #list items
 datesinlist = true
 authorsinlist = true
